@@ -1,5 +1,8 @@
 # FDS-VIM-Syntax
 Syntax file for the VIM text Editor for Fire Dynamics Simulator Input files. 
+
+Script requires grep to be installed.
+
 usage:
  1) clone a copy of the Git Repository:
 $git clone https://github.com/firemodels/fds.git

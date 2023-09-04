@@ -197,7 +197,7 @@ sub print_footer{
 	print SYNOUT "\"Numbers of various sorts, Copied the Fortran syntax file\n";
 	print SYNOUT "\n";
 	print SYNOUT "\" Integers\n";
-	print SYNOUT "syn match FDSInterger	display \"\\<\\d\\+\\(_\\a\\w*\\)\\=\\>\"\n";
+	print SYNOUT "syn match FDSInteger	display \"\\<\\d\\+\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number, without a decimal point\n";
 	print SYNOUT "syn match FDSFloat	display	\"\\<\\d\\+[deq][-+]\\=\\d\\+\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number, starting with a decimal point\n";
@@ -215,7 +215,7 @@ sub print_footer{
 	print SYNOUT "syntax region hString start=/\"\\|\'/ end=/\"\\|\'/ contained\n";
 	print SYNOUT "\n";
 	print SYNOUT "\" instructions - Anything that begins with & and end with /\n";
-	print SYNOUT "syn region instructions start=/^\\s*&/ end=/[/]/ contains=FDS4OBS,hstring,FDS5PA,NAMELIST,FDSNumber,FDSFloat,FDSInterger,FDSOperator,hBool contained\n";
+	print SYNOUT "syn region instructions start=/^\\s*&/ end=/[/]/ contains=FDS4OBS,hstring,FDS5PA,NAMELIST,FDSNumber,FDSFloat,FDSInteger,FDSOperator,hBool contained\n";
 	print SYNOUT "\n";
 	print SYNOUT "\" comments: everything is a comment, unless it is an instruction, see above\n";
 	print SYNOUT "syn match  comment /.*/ contains=instructions\n";
@@ -238,7 +238,7 @@ sub print_footer{
 	print SYNOUT "  HiLink FDS4OBS		Error\n";
 	print SYNOUT "  HiLink instructions		Statement\n";
 	print SYNOUT "  HiLink FDSNumber 		Number\n";
-	print SYNOUT "  HiLink FDSInterger		Number\n";
+	print SYNOUT "  HiLink FDSInteger		Number\n";
 	print SYNOUT "  HiLink FDSFloat		Number\n";
 	print SYNOUT "  HiLink hBool			Boolean\n";
 	print SYNOUT "  HiLink comment		Comment\n";

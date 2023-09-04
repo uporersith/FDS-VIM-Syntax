@@ -303,7 +303,7 @@ syn match hBool /\(\.TRUE\.\)\|\(\.FALSE\.\)/ contained
 "Numbers of various sorts, Copied the Fortran syntax file
 
 " Integers
-syn match FDSInterger	display "\<\d\+\(_\a\w*\)\=\>"
+syn match FDSInteger	display "\<\d\+\(_\a\w*\)\=\>"
 " floating point number, without a decimal point
 syn match FDSFloat	display	"\<\d\+[deEq][-+]\=\d\+\(_\a\w*\)\=\>"
 " floating point number, starting with a decimal point
@@ -321,7 +321,7 @@ syn match FDSOperator	"\(\(>\|<\)=\=\|==\|/=\|=\)"
 syntax region hString start=/"\|'/ end=/"\|'/ contained
 
 " instructions - Anything that begins with & and end with /
-syn region instructions start=/^\s*&/ end=/[/]/ contains=FDS4OBS,hstring,FDS5PA,NAMELIST,FDSNumber,FDSFloat,FDSInterger,FDSOperator,hBool contained
+syn region instructions start=/^\s*&/ end=/[/]/ contains=FDS4OBS,hstring,FDS5PA,NAMELIST,FDSNumber,FDSFloat,FDSInteger,FDSOperator,hBool contained
 
 " comments: everything is a comment, unless it is an instruction, see above
 syn match  comment /.*/ contains=instructions
@@ -344,7 +344,7 @@ if version >= 508 || !exists("did_blank_syntax_inits")
   HiLink FDS4OBS		Error
   HiLink instructions		Statement
   HiLink FDSNumber 		Number
-  HiLink FDSInterger		Number
+  HiLink FDSInteger		Number
   HiLink FDSFloat		Number
   HiLink hBool			Boolean
   HiLink comment		Comment

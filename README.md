@@ -27,19 +27,14 @@ Script requires grep to be installed.
 
 outputs **fds.vim**
 
-Place the fds.vim file in the vim syntax folder[^1] and add the line:
+---
+
+Place the generated **fds.vim** file in the vim syntax folder[^1] and add the line:
 ```sh
 au BufNewFile,BufRead *.fds	setf fds
 ```
 To the filetype.vim file[^2]
 
----
-
-[^1]: Common install locations
-- $HOME/.vim/syntax (unix-based)
-- $/HOME/vimfiles/syntax (unix-based)
-- \<Program files\>\Vim\vim\<version\>\syntax (windows)
-[^2]: Typically located in 
-- /usr/share/vim/vim\<version\>/filetype.vim (unix-based)
-- \<Program Files\>\Vim\vim\<version\>\filetype.vim (windows)
+[^1]: Common install locations $HOME/.vim/syntax (unix-based), $/HOME/vimfiles/syntax (unix-based) and \<Program files\>\Vim\vim\<version\>\syntax (windows)
+[^2]: Typically located in /usr/share/vim/vim\<version\>/filetype.vim (unix-based) and \<Program Files\>\Vim\vim\<version\>\filetype.vim (windows)
 

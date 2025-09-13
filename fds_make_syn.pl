@@ -149,7 +149,7 @@ sub print_header{
 	print SYNOUT "\" Vim Syntax file generated for FDS version:\n";
 	print SYNOUT "\"    $FDSVER\n";
 	print SYNOUT "\"--------------------------------------------------\n";
-	print SYNOUT "\" Language:     fds v. 4,5,6 input files\n";
+	print SYNOUT "\" Language:     fds v. 4,5,6,7 input files\n";
 	print SYNOUT "\" Maintainer:   Andrew Louie <andrew.louie\@wsp.com>\n";
 	print SYNOUT "\" Last change:  $date\n";
 	print SYNOUT "\" Updated(2018-06-29):\n"; 
@@ -199,15 +199,15 @@ sub print_footer{
 	print SYNOUT "\" Integers\n";
 	print SYNOUT "syn match FDSInterger	display \"\\<\\d\\+\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number, without a decimal point\n";
-	print SYNOUT "syn match FDSFloat	display	\"\\<\\d\\+[deq][-+]\\=\\d\\+\\(_\\a\\w*\\)\\=\\>\"\n";
+	print SYNOUT "syn match FDSFloat	display	\"\\<\\d\\+[deEq][-+]\\=\\d\\+\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number, starting with a decimal point\n";
-	print SYNOUT "syn match FDSNumber 	display \"\\<\\.\\d\\+\\([deq][-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
+	print SYNOUT "syn match FDSNumber 	display \"\\<\\.\\d\\+\\([deEq][-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number, no digits after decimal\n";
-	print SYNOUT "syn match FDSNumber	display \"\\<\\d\\+\\.\\([deq][-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
+	print SYNOUT "syn match FDSNumber	display \"\\<\\d\\+\\.\\([deEq][-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number, D or Q exponents\n";
 	print SYNOUT "syn match FDSNumber	display	\"\\<\\d\\+\\.\\d\\+\\([dq][-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\" floating point number\n";
-	print SYNOUT "syn match FDSNumber	display	\"\\<\\d\\+\\.\\d\\+\\(e[-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
+	print SYNOUT "syn match FDSNumber	display	\"\\<\\d\\+\\.\\d\\+\\(eE[-+]\\=\\d\\+\\)\\=\\(_\\a\\w*\\)\\=\\>\"\n";
 	print SYNOUT "\n";
 	print SYNOUT "syn match FDSOperator	\"\\(\\(>\\|<\\)=\\=\\|==\\|/=\\|=\\)\"\n";
 	print SYNOUT "\n";
